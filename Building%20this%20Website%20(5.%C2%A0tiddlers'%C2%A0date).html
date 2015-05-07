@@ -81,8 +81,14 @@ color:#333333;">
 </div>
 
 <div class="tc-tiddler-body"><p class="box">This is a series of posts which technically describes how <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Not%2520Even%2520Odd.html">Not Even Odd</a> is built. It is primarily meant as a guide for static website creation using <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a>.<br><br>This article is based on <a class="tc-tiddlylink-external" href="https://groups.google.com/forum/#!searchin/tiddlywiki/static/tiddlywiki/yscda-o5qxc/kEaEtgq2CpkJ" target="_blank">this post from Jim Lehmer</a> in the <a class="tc-tiddlylink-external" href="https://groups.google.com/forum/#!forum/tiddlywiki" target="_blank">TiddlyWiki community forum</a>.
-</p><p><div class="borderless" style="float:right; max-width:280px !important; padding=0; spacing=0;">
-<table class="borderless" style="padding=0; spacing=0;"><tr><td style="text-align:center;"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Not%2520Even%2520Odd.html"><img src="res/notevenodd.png"></a></td></tr><tr><td><p><div style="text-align:center; font-weight: bold;"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website.html">Building this Website</a></div></p><p><strong>Static site with TiddlyWiki</strong></p><ul><li>1. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website%2520(1.%25C2%25A0content%25C2%25A0selection).html">content selection</a></li><li>2. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website%2520(2.%25C2%25A0template).html">creating a template</a></li><li>3. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website%2520(3.%25C2%25A0navigation).html">creating navigation</a></li><li>4. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website%2520(4.%25C2%25A0tags).html">tags</a></li><li>5. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website%2520(5.%25C2%25A0tiddlers'%25C2%25A0date).html">fixing tiddler's date</a></li><li>6. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website%2520(6.%25C2%25A0external%2520files).html">external files</a></li><li>7. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website%2520(7.%25C2%25A0plugins).html">plugins</a> (<strong>TODO</strong>)</li></ul><p><strong>Hosting with GitHub</strong></p><ul><li>hosting (to be published soon...)</li></ul></td></tr></table>
+</p><p><div class="borderless" style="float:right; max-width:250px !important; padding-left:15px;">
+<table class="borderless" style="padding=0; spacing=0;"><tr><td style="text-align:center;"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Not%2520Even%2520Odd.html"><img src="res/notevenodd.png"></a></td></tr><tr><td><p><div style="text-align:center; font-weight: bold;"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website.html">Building this Website</a></div></p><p><strong>Static site with TiddlyWiki</strong></p><p>1. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website%2520(1.%25C2%25A0content%25C2%25A0selection).html">content selection</a>
+<br>2. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website%2520(2.%25C2%25A0template).html">creating a template</a>
+<br>3. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website%2520(3.%25C2%25A0navigation).html">creating navigation</a>
+<br>4. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website%2520(4.%25C2%25A0tags).html">tags</a>
+<br>5. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website%2520(5.%25C2%25A0tiddlers'%25C2%25A0date).html">fixing tiddler's date</a>
+<br>6. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website%2520(6.%25C2%25A0external%2520files).html">external files</a>
+<br>7. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Building%2520this%2520Website%2520(7.%25C2%25A0plugins).html">plugins</a> (<strong>TODO</strong>)</p><p><strong>Hosting with GitHub</strong></p><p>hosting (<em>soon...</em>)</p></td></tr></table>
 </div></p><p>In <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a>, when you create a new tiddler and save it, the subtitle will read something like &quot;<em>1 second ago</em>&quot;, that is, the last modified time is displayed as a &quot;relative date.&quot; It then ages over a period of minutes, hours, days, weeks and so on. The problem with that behavior on a static site is that the date gets &quot;frozen in time&quot; when you <a class="tc-tiddlylink-external" href=" |http://tiddlywiki.com/#Generating%20Static%20Sites%20with%20TiddlyWiki" target="_blank">generate a static site</a>.</p><p>One way to correct this is to override the <a class="tc-tiddlylink-external" href="http://tiddlywiki.com/#ShadowTiddlers" target="_blank">shadow tiddler</a> <code>$:/core/ui/ViewTemplate/subtitle</code> <sup>(<a class="tc-tiddlylink tc-tiddlylink-shadow tc-tiddlylink-resolves" href="%2524%253A%252Fcore%252Fui%252FViewTemplate%252Fsubtitle.html">local</a>) (<a class="tc-tiddlylink-external" href="https://raw.githubusercontent.com/Jermolene/TiddlyWiki5/v5.1.8/core/ui/ViewTemplate/subtitle.tid" target="_blank">v5.1.8</a>) (<a class="tc-tiddlylink-external" href="http://tiddlywiki.com/#%24%3A%2Fcore%2Fui%2FViewTemplate%2Fsubtitle" target="_blank">current TW</a>)</sup>, which looks like this out of the box:</p><pre class="html hljs"><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tc-subtitle"</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">$link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">{{!!modifier}}</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">$view</span> <span class="hljs-attribute">field</span>=<span class="hljs-value">"modifier"</span>/&gt;</span>
@@ -127,6 +133,16 @@ Follow:
 </div>
 </div>
 
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62711195-1', 'auto');
+  ga('send', 'pageview');
+</script>
 
 </body>
 </html>
