@@ -2258,4 +2258,6 @@ a.tc-tiddlylink:hover {
 .borderless th,
 .borderless tbody
    { border:0 !important; }
-
+/* links for tags */
+.tc-tag-label a { color:inherit; padding-up:0.1em; }
+.tc-tag-list-item p { display: inline; }
